@@ -1,31 +1,20 @@
 "use client";
-import { useState } from "react";
+import Link from "next/link";
 import style from "./page.module.css";
 import { useRouter } from "next/navigation";
 
 function Home() {
-  const [searchInput, setSearchInput] = useState("");
   const router = useRouter();
-
-  const handleOnChange = (e) => {
-    setSearchInput(e.target.value);
-  };
-
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    router.push(`/search/sono/?query=${searchInput}`);
+  const onClick = () => {
+    router.push("/detail");
   };
   return (
     <div className={style.container}>
-      <form onSubmit={handleOnSubmit}>
-        <input
-          className={style.input}
-          type="text"
-          value={searchInput}
-          onChange={handleOnChange}
-          placeholder="검색어를 입력해주세요"
-        />
-      </form>
+      <div onClickCapture={onClick} className={style.post}>
+        <Link className={style.link} href={"/search"}>
+          프로필 페이지로 가기
+        </Link>
+      </div>
     </div>
   );
 }

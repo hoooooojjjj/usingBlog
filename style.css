@@ -3,22 +3,29 @@
   height: 100dvh;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .post {
-  margin: 200px;
-  width: 30dvw;
-  height: 20dvh;
+  margin: 100px;
+  width: 50dvw;
+  height: 40dvh;
   background-color: orange;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 10px;
   position: relative;
 }
-.link {
+.profile {
   position: absolute;
-  top: 40%;
-  left: 35%;
+  top: 70%;
+  left: 30%;
   background-color: purple;
   padding: 10px;
   border-radius: 10px;
+  color: white;
+}
+.img {
+  position: absolute;
+  top: 10%;
+  left: 37%;
 }
