@@ -1,9 +1,13 @@
 const post = document.querySelector(".post");
 const profile = document.querySelector(".profile");
-post.addEventListener("click", () => {
-  window.location.href = "detail.html";
-  // console.log("post 클릭");
-});
+post.addEventListener(
+  "click",
+  () => {
+    window.location.href = "detail.html";
+    // console.log("post 클릭");
+  },
+  true
+);
 
 profile.addEventListener("click", () => {
   window.location.href = "profile.html";
