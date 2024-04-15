@@ -1,19 +1,30 @@
 "use client";
-import Link from "next/link";
-import style from "./page.module.css";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
+import "./styles.css";
+import classNames from "classnames";
 
 function Home() {
-  const router = useRouter();
-  const onClick = () => {
-    router.push("/detail");
+  const [isRed, setIsRed] = useState(false);
+
+  const blueClick = () => {
+    setIsRed(false);
+  };
+  const redClick = () => {
+    setIsRed(true);
   };
   return (
-    <div className={style.container}>
-      <div onClickCapture={onClick} className={style.post}>
-        <Link className={style.link} href={"/search"}>
-          프로필 페이지로 가기
-        </Link>
+    <div className="container">
+      <div>
+        <div>
+          <button onClick={blueClick} className="btn">
+            파랑
+          </button>
+          <button onClick={redClick} className="btn">
+            빨강
+          </button>
+        </div>
+        <div className={`box ${isRed ? "red" : "blue"}`}></div>
+        <div className={classNames("box", { red: isRed, blue: isRed })}></div>
       </div>
     </div>
   );

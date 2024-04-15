@@ -4,21 +4,3 @@
   display: flex;
   justify-content: center;
 }
-
-.post {
-  margin: 200px;
-  width: 30dvw;
-  height: 20dvh;
-  background-color: orange;
-  border: 2px solid white;
-  border-radius: 10px;
-  position: relative;
-}
-.link {
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  background-color: purple;
-  padding: 10px;
-  border-radius: 10px;
-}
