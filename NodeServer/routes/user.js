@@ -8,6 +8,7 @@ router
     res.send("User Page");
   })
   .post((req, res) => {
+    console.log(req.body);
     res.send("Create User info");
   });
 
